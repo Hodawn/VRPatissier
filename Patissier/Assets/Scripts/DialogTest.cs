@@ -14,19 +14,20 @@ public class DialogTest : MonoBehaviour
         sentences = new Queue<string>();
     }
 
-    public void StartDialog(Dialog dialog)
-    {
-        dialogBox.SetActive(true);
+    //Dialog 객체를 따로 정의 하지않아 오류가 있어서 주석 처리함
+    //public void StartDialog(Dialog dialog)
+    //{
+    //    dialogBox.SetActive(true);
 
-        sentences.Clear();
+    //    sentences.Clear();
 
-        foreach (string sentence in dialog.sentences)
-        {
-            sentences.Enqueue(sentence);
-        }
+    //    foreach (string sentence in dialog.sentences)
+    //    {
+    //        sentences.Enqueue(sentence);
+    //    }
 
-        DisplayNextSentence();
-    }
+    //    DisplayNextSentence();
+    //}
 
     public void DisplayNextSentence()
     {

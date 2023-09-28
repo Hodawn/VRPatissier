@@ -24,7 +24,7 @@ public class DialogSystem : MonoBehaviour
     [SerializeField]
     private bool DialogInit = true;                     //자동 시작 여부
     [SerializeField]
-    //private bool dialogsDB = false;                     //DB를 통해 읽는것 설정
+    private bool dialogsDB = false;                     //DB를 통해 읽는것 설정
 
     public int currentDialogIndex = -1;                 //현재 대사 순번
     public int currentSpeakerIndex = 0;                 //현재 말을 하는 화자의 Speakers 배열 순번
