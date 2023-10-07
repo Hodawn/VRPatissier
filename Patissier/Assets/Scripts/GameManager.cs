@@ -19,4 +19,6 @@ public class GameManager : GenericSingleton<GameManager>
     {
         playerScore += amount;                              //함수를 통해서 스코어를 증가시킨다.
     }
+    //public AudioClip Aspiration Woods(Area Theme);
+    //private new AudioSource audio;
 }
