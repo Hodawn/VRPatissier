@@ -82,7 +82,7 @@ MonoBehaviour:
       selectIndex: -100
       nextScene: None
     - index: 6
-      speakerUIindex: 0
+      speakerUIindex: -1
       name: "\uC774\uB984_007"
       dialogue: "\uB2E4\uC774\uC5BC\uB85C\uADF8 \uD14C\uC2A4\uD2B8 \uB2E4\uC774\uC5BC\uB85C\uADF8
         \uD14C\uC2A4\uD2B8 \uB2E4\uC774\uC5BC\uB85C\uADF8 \uD14C\uC2A4\uD2B8 007"
