@@ -45,7 +45,7 @@ public class GameController : MonoBehaviour
         {
             SendRayCast();
         }
-        if (Input.GetKeyDown(KeyCode.Mouse0))    //스페이스 키를 눌렀을 때 랜덤 아이템 배치 > 왼쪽 클릭 시 아이템 생성
+        if (Input.GetKeyDown(KeyCode.A))    //스페이스 키를 눌렀을 때 랜덤 아이템 배치 > 왼쪽 클릭 시 아이템 생성 > A키로 바꿔둠
         {
             PlaceRandomitem();
         }
