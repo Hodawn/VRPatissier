@@ -28,7 +28,7 @@ public class Slot : MonoBehaviour
         var itemGO = (GameObject)Instantiate(Resources.Load(itemPath));//아이템 경로에 있는 프리팹을 생성
         //생성한 게임 오브젝트 초기화
         itemGO.transform.SetParent(this.transform);             //slot 오브젝트 하위로 설정
-        itemGO.transform.localPosition = Vector3.zero;          //로컬 위치는 Vector3(0, 0 ,0)
+        itemGO.transform.localPosition = Vector3.zero + new Vector3(0,0,1);          //로컬 위치는 Vector3(0, 0 ,0)
         itemGO.transform.localScale = Vector3.one;              //로컬 Scale은 Vector3(1, 1, 1)
         //생성 item 컴포넌트 데이터 입력
         itemObject = itemGO.GetComponent<Item>();               //생성한 게임 오브젝트의 item Class 를 접근

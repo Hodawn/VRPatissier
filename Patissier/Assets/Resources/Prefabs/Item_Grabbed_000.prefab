@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4406147893435818926}
   - component: {fileID: 6748722491433465680}
   - component: {fileID: 1613233493266056353}
-  - component: {fileID: -3635496764178794851}
+  - component: {fileID: 6345457633084230508}
   m_Layer: 0
-  m_Name: Item_000
+  m_Name: Item_Grabbed_000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-3635496764178794851
+--- !u!114 &6345457633084230508
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,8 +93,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6211440961421641635}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a186cec1d361f74792530ad33795482, type: 3}
+  m_Script: {fileID: 11500000, guid: 87a8262314aba8040bcc2b8b9e68882a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  parentSlot: {fileID: 0}
+  slotld: 0
+  itemld: 0

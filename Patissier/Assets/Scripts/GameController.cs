@@ -31,8 +31,15 @@ public class GameController : MonoBehaviour
             SendRayCast();
         }
         if (Input.GetMouseButton(0) && carryingitem)           //마우스 버튼 누름 상태에서 아이템 선택 및 이동 처리
-        {
+        {         
             Onitemselected();
+        }
+
+        if (Input.GetMouseButton(0))           //마우스 버튼 누름 상태에서 아이템 선택 및 이동 처리
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);                //화면의 마우스 좌표를 통해서 월드 상의 레이케스팅
+            Debug.DrawRay(ray.origin, ray.direction * 100f, Color.red);
+           
         }
         if (Input.GetMouseButtonUp(0))          //마우스 버튼 떼기 이벤트 처리
         {
@@ -49,8 +56,11 @@ public class GameController : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);                //화면의 마우스 좌표를 통해서 월드 상의 레이케스팅
         RaycastHit hit;                                                               //hit 물리 선언
 
+       
+
         if (Physics.Raycast(ray, out hit))                               //hit된 것이 있을 경우
         {
+            Debug.Log(hit.collider.gameObject.name);
             var slot = hit.transform.GetComponent<Slot>();          //hit된 slot Component를 가져온다
             if (slot.state == Slot.SLOTSTATE.FULL && carryingitem == null)      //선택한 슬롯에서 아이템을 잡고 이동하는 경우
             {
@@ -94,7 +104,7 @@ public class GameController : MonoBehaviour
     void Onitemselected()
     {
         _target = Camera.main.ScreenToWorldPoint(Input.mousePosition);  //월드 좌표에서 마우스 포지션 값을 가져와서 _target입력
-        _target.z = 0;                                              //2D
+        _target.z = 2;                                              //2D
 
         var delta = 10 * Time.deltaTime;        //이동속도 조절
 
