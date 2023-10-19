@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour
             slots[i].id = i;
             slotDictionary.Add(i, slots[i]);
         }
+        PlaceRandomitem();
     }
 
     // Update is called once per frame
@@ -77,6 +78,7 @@ public class GameController : MonoBehaviour
             {
                 slot.Createitem(carryingitem.itemld);               //잡고 있떤 아이템 아이디를 가져와서 슬롯에 생성하고    
                 Destroy(carryingitem.gameObject);                   //잡고 있던 아이템 삭제
+                PlaceRandomitem();
             }
             else if (slot.state == Slot.SLOTSTATE.FULL && carryingitem != null)          //아이템끼리 같은 슬롯 위에 있을때
             {
