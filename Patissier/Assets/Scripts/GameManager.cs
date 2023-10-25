@@ -14,7 +14,15 @@ public class GameManager : GenericSingleton<GameManager>
     {
         SceneManager.LoadScene(SceneName);
     }
-    
+    // 다음 씬으로 전환할 때 사용할 씬 이름
+    public string nextSceneName = "LobbyScene";
+
+    public void SkipToNextScene()
+    {
+        // 다음 씬으로 전환
+        SceneManager.LoadScene(nextSceneName);
+    }
+
     public void inscreaseScore(int amount)
     {
         playerScore += amount;                              //함수를 통해서 스코어를 증가시킨다.

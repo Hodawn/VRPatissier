@@ -221,6 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScore: 0
+  nextSceneName: LobbyScene
 --- !u!4 &635475303
 Transform:
   m_ObjectHideFlags: 0
@@ -752,8 +753,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 635475302}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
+        m_MethodName: SkipToNextScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
