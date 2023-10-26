@@ -6,15 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : GenericSingleton<GameManager>
 {
     public int playerScore = 0;                                 //관리할 플레이어 스코어
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
+   
     
-    public void LoadScene(string SceneName)
-    {
-        SceneManager.LoadScene(SceneName);
-    }
 
     // 다음 씬으로 전환할 때 사용할 씬 이름
     public string nextSceneName = "LobbyScene";
@@ -24,6 +17,15 @@ public class GameManager : GenericSingleton<GameManager>
         // 다음 씬으로 전환
         SceneManager.LoadScene(nextSceneName);
     }
+    public void LoadScene(string SceneName)
+    {
+        SceneManager.LoadScene(SceneName);
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 
     public void inscreaseScore(int amount)
     {
