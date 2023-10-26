@@ -34,6 +34,7 @@ public class GameController : MonoBehaviour
         if (Input.GetMouseButton(0) && carryingitem)           //마우스 버튼 누름 상태에서 아이템 선택 및 이동 처리
         {         
             Onitemselected();
+
         }
 
         if (Input.GetMouseButton(0))           //마우스 버튼 누름 상태에서 아이템 선택 및 이동 처리
@@ -85,10 +86,12 @@ public class GameController : MonoBehaviour
                 if (slot.itemObject.id == carryingitem.itemld)                      //슬롯 위에 있는 아이템 id와 잡고 있는 아이템이 같을 경우
                 {
                     OnitemMergedWithTarget(slot.id);                            //아이템 병합
+                    PlaceRandomitem();
                 }
                 else
                 {
                     OnitemCarryFail();      //아이템 배치 실패
+                    PlaceRandomitem();
                 }
             }
 
