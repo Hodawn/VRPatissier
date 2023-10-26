@@ -10,10 +10,12 @@ public class GameManager : GenericSingleton<GameManager>
     {
         Application.Quit();
     }
+    
     public void LoadScene(string SceneName)
     {
         SceneManager.LoadScene(SceneName);
     }
+
     // 다음 씬으로 전환할 때 사용할 씬 이름
     public string nextSceneName = "LobbyScene";
 
