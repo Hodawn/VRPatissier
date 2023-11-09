@@ -22,6 +22,9 @@ public class GameController : MonoBehaviour
             slotDictionary.Add(i, slots[i]);
         }
         PlaceRandomitem();
+        PlaceRandomitem();
+        PlaceRandomitem();
+        PlaceRandomitem();
     }
 
     // Update is called once per frame
