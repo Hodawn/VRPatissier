@@ -80,7 +80,8 @@ public class GameController : MonoBehaviour
             }
             else if (slot.state == Slot.SLOTSTATE.EMPTY && carryingitem != null)         //빈 슬롯에 아이템 배치
             {
-                slot.Createitem(carryingitem.itemld);               //잡고 있떤 아이템 아이디를 가져와서 슬롯에 생성하고    
+                OnitemCarryFail();      //아이템 배치 실패
+                //slot.Createitem(carryingitem.itemld);               //잡고 있떤 아이템 아이디를 가져와서 슬롯에 생성하고    
                 Destroy(carryingitem.gameObject);                   //잡고 있던 아이템 삭제
                 PlaceRandomitem();
             }
@@ -107,6 +108,7 @@ public class GameController : MonoBehaviour
             }
             OnitemCarryFail();      //아이템 배치 실패
         }
+
     }
     //아이템을 선택하고 마우스 위치로 이동
     void Onitemselected()
