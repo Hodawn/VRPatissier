@@ -23,8 +23,7 @@ public class GameController : MonoBehaviour
         }
         PlaceRandomitem();
         PlaceRandomitem();
-        PlaceRandomitem();
-        PlaceRandomitem();
+        
     }
 
     // Update is called once per frame
