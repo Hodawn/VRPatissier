@@ -9,7 +9,7 @@ public class Exit : MonoBehaviour
     public string nextSceneName = "LobbyScene";
 
 
-    public void SkipToNextScene()
+    public void NextScene()
     {
         // 다음 씬으로 전환
         SceneManager.LoadScene(nextSceneName);
