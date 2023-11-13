@@ -1626,28 +1626,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 619522725}
-  - component: {fileID: 619522724}
+  - component: {fileID: 619522726}
   m_Layer: 0
-  m_Name: GMR
+  m_Name: EXIT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &619522724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619522723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b165d282dcb96b46b0ad8e711ce4d49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerScore: 0
-  nextSceneName: LobbyScene
 --- !u!4 &619522725
 Transform:
   m_ObjectHideFlags: 0
@@ -1663,6 +1649,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &619522726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619522723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26666e3481d82f3439f801e0cb01b4ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneName: LobbyScene
 --- !u!1 &622628572
 GameObject:
   m_ObjectHideFlags: 0
@@ -3307,6 +3306,7 @@ MonoBehaviour:
   - {fileID: 982339192}
   - {fileID: 527984340}
   - {fileID: 1320011204}
+  GameOver_Panel: {fileID: 0}
 --- !u!4 &1316227903
 Transform:
   m_ObjectHideFlags: 0
@@ -3956,7 +3956,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 619522724}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -4297,7 +4297,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 619522724}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1

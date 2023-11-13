@@ -8,16 +8,6 @@ public class GameManager : GenericSingleton<GameManager>
     public int playerScore = 0;                                 //관리할 플레이어 스코어
    
     
-
-    // 다음 씬으로 전환할 때 사용할 씬 이름
-    public string nextSceneName = "LobbyScene";
-    
-
-    public void SkipToNextScene()
-    {
-        // 다음 씬으로 전환
-        SceneManager.LoadScene(nextSceneName);
-    }
     public void LoadScene(string SceneName)
     {
         SceneManager.LoadScene(SceneName);

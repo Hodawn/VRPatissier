@@ -200,28 +200,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 635475303}
-  - component: {fileID: 635475302}
+  - component: {fileID: 635475304}
   m_Layer: 0
-  m_Name: GMR
+  m_Name: Skip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &635475302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 635475301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b165d282dcb96b46b0ad8e711ce4d49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerScore: 0
-  nextSceneName: LobbyScene
 --- !u!4 &635475303
 Transform:
   m_ObjectHideFlags: 0
@@ -237,6 +223,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &635475304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635475301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 907bc6caa11a73e43b2655d2c66e6603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneName: LobbyScene
 --- !u!1 &876237331
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,8 +847,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 635475302}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 635475304}
+        m_TargetAssemblyTypeName: Skip, Assembly-CSharp
         m_MethodName: SkipToNextScene
         m_Mode: 1
         m_Arguments:
