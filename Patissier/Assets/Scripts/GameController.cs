@@ -183,6 +183,29 @@ public class GameController : MonoBehaviour
 
             // 여기에 GameOver_Panel을 활성화하는 코드 추가
 
+
+            // 여기에 GameOver_Panel을 활성화하는 코드 추가
+            if (GameOverPanel != null)
+            {
+                GameOverPanel.SetActive(true);
+            }
+            else
+            {
+                Debug.LogError("GameOverPanel이 할당되지 않았습니다!");
+            }
+
+            // 여기에 MAP 오브젝트를 찾아서 비활성화하는 코드 추가
+            GameObject mapObject = GameObject.Find("MAP");
+            if (mapObject != null)
+            {
+                mapObject.SetActive(false);
+            }
+            else
+            {
+                Debug.LogError("MAP 오브젝트를 찾을 수 없습니다!");
+            }
+
+
             return;
         }
 
