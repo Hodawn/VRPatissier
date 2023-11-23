@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     private Dictionary<int, Slot> slotDictionary;   //슬롯 정보값 관리하는 자료구조
 
     public GameObject GameOver_Panel; // 게임 오버 패널을 연결할 변수, 나중에 수정
+    public GameObject GameOverPanel; // GameOver_Panel GameObject를 연결할 변수
 
     // Start is called before the first frame update
     void Start()
@@ -173,5 +174,25 @@ public class GameController : MonoBehaviour
     Slot GetSlotByld(int id)        //슬롯 ID로 슬롯을 검색
     {
         return slotDictionary[id];      //딕셔너리에 담겨있는 Slot Class 반환 (번호를 통해서)
+    }
+    private void ActivateGameOverPanel()
+    {
+        if (AllSlotsOccupied())
+        {
+            Debug.Log("슬롯이 다 차있음 => 생성 불가");
+
+            // 여기에 GameOver_Panel을 활성화하는 코드 추가
+
+            return;
+        }
+
+        if (GameOverPanel != null)
+        {
+            GameOverPanel.SetActive(true);
+        }
+        else
+        {
+            Debug.LogError("GameOverPanel이 할당되지 않았습니다!");
+        }
     }
 }
