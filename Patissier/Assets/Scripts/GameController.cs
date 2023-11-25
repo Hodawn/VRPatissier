@@ -11,8 +11,11 @@ public class GameController : MonoBehaviour
 
     private Dictionary<int, Slot> slotDictionary;   //슬롯 정보값 관리하는 자료구조
 
-    public GameObject GameOver_Panel; // 게임 오버 패널을 연결할 변수, 나중에 수정
+    public GameObject GameOver_Panel; // 게임 오버 패널을 연결할 변수
     public GameObject GameOverPanel; // GameOver_Panel GameObject를 연결할 변수
+
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +63,8 @@ public class GameController : MonoBehaviour
 
     void SendRayCast()      //마우스 클릭 시 Ray 발사
     {
+        
+
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);                //화면의 마우스 좌표를 통해서 월드 상의 레이케스팅
         RaycastHit hit;                                                               //hit 물리 선언
 
@@ -188,22 +193,16 @@ public class GameController : MonoBehaviour
             if (GameOverPanel != null)
             {
                 GameOverPanel.SetActive(true);
+
+                
+
             }
             else
             {
                 Debug.LogError("GameOverPanel이 할당되지 않았습니다!");
             }
 
-            // 여기에 MAP 오브젝트를 찾아서 비활성화하는 코드 추가
-            GameObject mapObject = GameObject.Find("MAP");
-            if (mapObject != null)
-            {
-                mapObject.SetActive(false);
-            }
-            else
-            {
-                Debug.LogError("MAP 오브젝트를 찾을 수 없습니다!");
-            }
+            
 
 
             return;
@@ -212,6 +211,8 @@ public class GameController : MonoBehaviour
         if (GameOverPanel != null)
         {
             GameOverPanel.SetActive(true);
+
+            
         }
         else
         {
